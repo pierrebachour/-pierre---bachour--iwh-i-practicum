@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    div.container
+      h1 Add New Custom Object
+      
+      p
+        a(href='/') Return to the homepage
+      
+      form(action='/update-cobj', method='POST')
+        div.form-group
+          label(for='name') name:
+          input(type='text', id='name', name='name', required)
+        
+        div.form-group
+          label(for='sexe') sexe:
+          input(type='text', id='sexe', name='sexe', required)
+        
+        div.form-group
+          label(for='pays') pays:
+          input(type='text', id='pays', name='pays', required)
+        
+        button(type='submit') Add Object

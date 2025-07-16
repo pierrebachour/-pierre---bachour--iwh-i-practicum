@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    div.container
+      h1 Custom Objects List
+      
+      p
+        a(href='/update-cobj') Add to this table
+      
+      table
+        thead
+          tr
+            th name
+            th sexe
+            th pays
+        tbody
+          if data && data.length > 0
+            each object in data
+              tr
+                td= object.properties.name
+                td= object.properties.sexe
+                td= object.properties.pays
+          else
+            tr
+              td(colspan='3') No objects found
